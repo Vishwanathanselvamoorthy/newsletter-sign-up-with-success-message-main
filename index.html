@@ -47,7 +47,7 @@
 
     <div class="container">
       <div class="img-container">
-        <img src="./assets/images/illustration-sign-up-mobile.svg" />
+        <img id="main-img" src="./assets/images/illustration-sign-up-mobile.svg" />
       </div>
       <div class="text-container">
         <h1>Stay updated!</h1>
@@ -64,19 +64,26 @@
           <li><img src="./assets/images/icon-list.svg" />And much more!</li>
         </ul>
         <form>
-          <p>Email address</p>
-          <input placeholder="email@company.com" />
-          <button>Subscribe to monthly newsletter</button>
+          <div class="input-content">
+            <p>Email address</p>
+            <p class="error-message"></p>
+          </div>
+
+          <input placeholder="email@company.com" class="email-box" />
+          <button class="subscribe-button">
+            Subscribe to monthly newsletter
+          </button>
         </form>
       </div>
-      <div class="success-container">
+      <div class="success-container hidden">
         <img src="./assets/images/icon-success.svg" />
         <h1>Thanks for subscribing!</h1>
         <p>
-          A confirmation email has been sent to ash@loremcompany.com. Please
-          open it and click the button inside to confirm your subscription.
+          A confirmation email has been sent to
+          <span>ash@loremcompany.com</span>. Please open it and click the button
+          inside to confirm your subscription.
         </p>
-        <button>Dismiss Message</button>
+        <button class="dismiss-button">Dismiss Message</button>
       </div>
     </div>
     <script src="script.js"></script>

@@ -10,7 +10,6 @@
   height: 100vh;
 }
 .container .img-container {
-  display: none;
   width: 100%;
 }
 .container .img-container img {
@@ -18,15 +17,14 @@
 }
 .container .text-container {
   padding: 20px 30px;
-  display: none;
 }
 .container .text-container h1 {
   margin: 15px 0px;
-  font-size: 40px;
+  font-size: 55px;
 }
 .container .text-container p {
   margin: 15px 0px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
 }
 .container .text-container ul {
@@ -36,26 +34,42 @@
 }
 .container .text-container ul li {
   margin: 20px 0px;
-  font-size: 16px;
+  font-size: 18px;
   display: flex;
-  gap: 10px;
-  justify-content: left;
-  align-items: center;
+  gap: 15px;
+  align-items: start;
 }
 
 .container .text-container form p {
   margin: 0;
-  margin: 50px 0px 0px;
+  margin: 10px 0px 0px;
   font-weight: 500;
+  font-size: 18px;
 }
 
 .container .text-container form input {
   width: 100%;
   padding: 20px;
+  border: none;
   border: 1px solid gray;
   border-radius: 8px;
   margin: 20px 0px;
 }
+.container .text-container form .input-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* gap: 100px; */
+}
+.container .text-container form .input-content .error-message {
+  color: red;
+}
+
+.error-input-box {
+  background-color: rgba(255, 0, 0, 0.2) !important;
+  border: 2px solid red !important;
+}
+
 .container .text-container form button {
   width: 100%;
   padding: 20px;
@@ -67,11 +81,11 @@
   font-weight: 500;
 }
 .container .success-container {
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  /* height: 100vh; */
   text-align: left;
   padding: 20px;
 }
@@ -88,13 +102,51 @@
   margin: 20px;
 }
 .container .success-container p {
-  font-size: 16px;
+  font-size: 20px;
   letter-spacing: 1px;
   font-weight: 500;
 }
+.container .success-container p span {
+  font-weight: 900;
+  color: hsl(234, 29%, 20%);
+}
 .container .success-container button {
-  width: 100%;
-  position: fixed; /* or absolute */
-  bottom: 0;
-  margin-top: 20px; /* You may adjust this according to your layout */
+  width: 90%;
+  position: absolute; /* or absolute */
+  bottom: 20px;
+  margin-top: 20px;
+  padding: 20px;
+  color: white;
+  border: none;
+  background-color: hsl(234, 29%, 20%);
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+}
+.container .success-container button:hover {
+  background: rgb(255, 102, 71);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 102, 71, 1) 0%,
+    rgba(255, 86, 113, 1) 35%
+  );
+  box-shadow: 0px 4px 6px rgba(255, 102, 71, 1);
+}
+.hidden {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .container {
+  
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 150px;
+  }
+  .container .img-container {
+    max-width: 50%;
+  }
+  .container .text-container {
+    width: 50%;
+  }
 }
